@@ -35,6 +35,8 @@ If needed you can rebeal back:
 
 5. That's it
 
+Don't hesitate to test our [demo.](http://cepegra-labs.be/webdesign/2017/mvani/easy-reveal-demo/)
+
 Enjoy!
 
 ----
