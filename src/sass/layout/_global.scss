@@ -10,7 +10,7 @@ html {
 .easyReveal
 {
   transition: .6s transform ease-in-out, .6s opacity ease-in-out;
-  transform: translateY(-8rem);
+  transform: translateY(8rem);
   opacity: 0;
 
   &On
