@@ -8,6 +8,7 @@ class EasyReveal
     this.$window = $(window);
     this.initList();
     this.scrollInit();
+    this.once();
   }
   initList()
   {
@@ -22,24 +23,28 @@ class EasyReveal
   {
     this.$window.scroll(()=>
     {
-      let scroll = this.$window.scrollTop() + this.$window.height() - 100;
-      this.list.forEach((element)=>
+      this.once();
+    });
+  }
+  once()
+  {
+    let scroll = this.$window.scrollTop() + this.$window.height() - 100;
+    this.list.forEach((element)=>
+    {
+      if(element.offset < scroll)
       {
-        if(element.offset < scroll)
-        {
-          element.$target.addClass("easyRevealOn");
-        }
-        else if(this.back)
-        {
-          element.$target.removeClass("easyRevealOn");
-        }
-      });
+        element.$target.addClass("easyRevealOn");
+      }
+      else if(this.back)
+      {
+        element.$target.removeClass("easyRevealOn");
+      }
     });
   }
 }
 let $body = $("body");
 if($body.data("easyreveal"))
 {
-  let $targets = $body.find('[class*="easyReveal"]');
+  let $targets = $body.find('[class~="easyReveal"]');
   let easyReveal = new EasyReveal($targets, $body.data("revealback"));
 }
