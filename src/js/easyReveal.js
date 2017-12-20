@@ -40,6 +40,6 @@ class EasyReveal
 let $body = $("body");
 if($body.data("easyreveal"))
 {
-  let $targets = $body.find('[class="easyReveal"]');
+  let $targets = $body.find('[class*="easyReveal"]');
   let easyReveal = new EasyReveal($targets, $body.data("revealback"));
 }
