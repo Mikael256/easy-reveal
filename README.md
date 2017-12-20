@@ -7,7 +7,6 @@ Easy-reveal is an easy to use plugin that reveals your webpages elements as the 
 ## How to
 
 1. join jquery plugin in your html just before </body>
-example:
 ```
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 ```
@@ -33,7 +32,11 @@ If needed you can rebeal back:
 <body data-easyreveal="true" data-revealback="true">
 ```
 
-5. That's it
+5. Add easyReveal class to all your markups you wanna reveal
+```
+<h1 class="easyReveal">Hello!</h1>
+```
+6. That's it
 
 Don't hesitate to test our [demo.](http://cepegra-labs.be/webdesign/2017/mvani/easy-reveal-demo/)
 
